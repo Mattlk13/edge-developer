@@ -32,28 +32,26 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/microsoft-edge/breadcrumbs/toc.json",
-      "titleSuffix": "Microsoft Edge Development",
-      "uhfHeaderId": "MSDocsHeader-MSEdge",
+      "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/edge-developer",
-      "feedback_product_url": "https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer",
-      "extendBreadcrumb": true
+      "searchScope": ["Microsoft Edge"],
+      "titleSuffix": "Microsoft Edge Development",
+      "uhfHeaderId": "MSDocsHeader-MSEdge"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.technology":{
+        "devtools-guide-chromium/**.md": "devtools",
+        "devtools-protocol/**.md": "devtools",
+        "extensions-chromium/**.md": "extensions",
+        "webview2/**.md": "webview2",
+        "progressive-web-apps-chromium/**.md": "pwa"
+      }
+    },
     "template": [
       "docs.html"
     ],
     "dest": "microsoft-edge",
-    "markdownEngineName": "markdig",
-    "ms.technology":{
-      "dev-guide/**.md": "edgehtml",
-      "devtools-guide/**.md": "devtools",
-      "devtools-protocol/**.md": "devtools",
-      "extensions/**.md": "extensions",
-      "hosting/chakra-hosting/**.md": "chakra",
-      "hosting/webview/**.md": "webview",
-      "progressive-web-apps/**.md": "pwa",
-      "windows-runtime/**.md": "windows-integration"
-    }
+    "markdownEngineName": "markdig"
   }
 }

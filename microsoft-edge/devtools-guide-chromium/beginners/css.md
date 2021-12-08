@@ -1,278 +1,248 @@
 ---
-title: DevTools for Beginners
+description: Get Started with CSS
+title: "DevTools for beginners: Get started with CSS"
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/04/2019
+ms.date: 07/26/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge, web developement, f12 tools, devtools
+keywords: microsoft edge, web development, f12 tools, devtools
 ---
-<!-- Copyright 05/29/2019 Katherine Jackson 
+<!-- Copyright Katherine Jackson
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+       https://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
-   limitations under the License. -->
+   limitations under the License.  -->
 
-# DevTools For Beginners: Get Started with CSS 
+# DevTools for beginners: Get started with CSS
 
-In this tutorial, you learn how to use CSS to style a web page. You also learn how to
-use Microsoft Edge DevTools to experiment with CSS changes.
+In this tutorial, you learn how to use CSS to style a web page.  You also learn how to use Microsoft Edge DevTools to experiment with CSS changes.
 
-This is the second tutorial in a series of tutorials that teaches you the basics of web
-development and Microsoft Edge DevTools. You gain hands-on experience by actually building your own
-website. You don't have to complete the first tutorial before doing this one. 
-You can start here. [Set up your code](#set-up-your-code) shows you how to get set up.
+This article is part of a series of tutorials that teaches you the basics of web development and Microsoft Edge DevTools.  You gain hands-on experience by actually building your own website.  You don't have to complete the previous tutorials before doing this one.  [Set up your code](#set-up-your-code) shows you how to get set up.
 
 > [!NOTE]
-> This tutorial is designed for absolute beginners and focuses on both the **fundamentals of
-web development** and the basics of using DevTools to experiment with CSS. If you want a tutorial
-that only focuses on DevTools, see [Get Started with Viewing and Changing
-CSS](./../css/index.md).
+> This tutorial is designed for absolute beginners and focuses on both the **fundamentals of web development** and the basics of using DevTools to experiment with CSS.  If you want a tutorial that only focuses on DevTools, navigate to [Get Started with Viewing and Changing CSS](../css/index.md).
+
+At the beginning of the tutorial, your site should look like the following figure.
+
+:::image type="complex" source="../media/beginners-css-intro1.msft.png" alt-text="What your site currently looks like" lightbox="../media/beginners-css-intro1.msft.png":::
+   What your site currently looks like
+:::image-end:::
+
+After you complete the tutorial, your site should look like the following figure.
+
+:::image type="complex" source="../media/beginners-css-intro2.msft.png" alt-text="What your site should look like at the end of the tutorial" lightbox="../media/beginners-css-intro2.msft.png":::
+   What your site should look like at the end of the tutorial
+:::image-end:::
 
 
-Currently your site looks like this: 
+<!-- ====================================================================== -->
+## Goals
 
-<figure>
-  <img src="imgs/css/intro1.msft.png"
-       alt="What your site currently looks like."/>
-  <figcaption>
-    <b>Figure 1</b>. What your site currently looks like
-  </figcaption>
-</figure>
+Follow this tutorial to better understand the following concepts and tasks.
 
-After completing the tutorial, it will look like this: 
+*   How to use CSS to style a web page.
+*   How to use Microsoft Edge DevTools to experiment with CSS.
+*   The difference between CSS and CSS frameworks.
 
-<figure>
-  <img src="imgs/css/intro2.msft.png"
-       alt="What your site will look like at the end of the tutorial."/>
-  <figcaption>
-    <b>Figure 2</b>. What your site will look like at the end of the tutorial
-  </figcaption>
-</figure>
+You're building a real website.
 
-## Goals 
 
-By the end of this tutorial, you will understand:
+<!-- ====================================================================== -->
+## Prerequisites
 
-* How to use CSS to style a web page.
-* How to use Microsoft Edge DevTools to experiment with CSS.
-* The difference between CSS and CSS frameworks.
+Complete the following prerequisites before doing this tutorial.
 
-You'll also have a real website!
+*   Complete [Get Started with HTML and the DOM](./html.md) or make sure that you have understanding of HTML and the DOM already.
+*   Download the [Microsoft Edge](https://www.microsoftedgeinsider.com) web browser.  The following tutorial uses a set of web development tools, called the Microsoft Edge DevTools, that are built into Microsoft Edge.
 
-## Prerequisites 
 
-Before attempting this tutorial, complete the following prerequisites:
+<!-- ====================================================================== -->
+## Set up your code
 
-* Complete [Get Started with HTML and the DOM](./html.md) 
-  or make sure that you have an understanding
-  of HTML and the DOM similar to what's taught in that tutorial.
-* Download the [Microsoft Edge](https://www.microsoftedgeinsider.com) web browser. This tutorial uses a set 
-  of web development tools, called the Microsoft Edge DevTools, that are built into Microsoft Edge.
+To create your site, first do the following steps to set up your code.
 
-## Set up your code 
+> [!NOTE]
+> If you have already completed the first tutorial in the series, skip to the next section.  Continue using your code from the last tutorial, [Get Started with HTML and the DOM](./html.md).
 
-In order to start creating your site, you need to set up your code:
+1.  Open the [source code](https://glitch.com/edit/#!/cooked-amphibian?path=index.html).  The tab of your browser that's currently selected is called the **editing tab**.
 
-1. **If you have already completed the first tutorial in this series, skip this section! 
-   Continue using your code from the last tutorial, 
-   [Get Started with HTML and the DOM](./html.md).**
-2. Open the [source code](https://glitch.com/edit/#!/cooked-amphibian?path=index.html). This tab of your
-   browser will be called the **editing tab**.
+    :::image type="complex" source="../media/beginners-css-setup1.msft.png" alt-text="The editing tab" lightbox="../media/beginners-css-setup1.msft.png":::
+       The **editing** tab
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/setup1.msft.png"
-            alt="The editing tab."/>
-       <figcaption>
-         <b>Figure 3</b>. The editing tab
-       </figcaption>
-     </figure>
+1.  Select **cooked-amphibian**.  A menu pops up.
 
-3. Click **cooked-amphibian**. A menu pops up.
+    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="The Project Options menu" lightbox="../media/beginners-css-setup2.msft.png":::
+       The Project Options menu
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/setup2.msft.png"
-            alt="The Project Options menu."/>
-       <figcaption>
-         <b>Figure 4</b>. The Project Options menu
-       </figcaption>
-     </figure>
+1.  Select **Remix Project**.  Glitch creates a copy of the project that you can edit.
 
-4. Click **Remix Project**. Glitch creates a copy of the project that you can 
-   edit. Note that Glitch generates a random name for the new project.
-5. Click **Show** and select **In a New Window**. Another tab opens with a live view of your site.
-   This tab of your browser will be called the **live tab**.
+    > [!NOTE]
+    > Glitch generates a random name for the new project.
 
-     <figure>
-       <img src="imgs/css/setup3.msft.png"
-            alt="The live tab."/>
-       <figcaption>
-         <b>Figure 5</b>. The live tab
-       </figcaption>
-     </figure>
+1.  Select **Show** and then select **In a New Window**.  Another tab opens with a live view of your site.  The tab of your browser that's currently selected is called the **live tab**.
 
-## Understand CSS 
+    :::image type="complex" source="../media/beginners-css-setup3.msft.png" alt-text="The live tab" lightbox="../media/beginners-css-setup3.msft.png":::
+       The **live tab**
+    :::image-end:::
 
-**CSS** is a computer language that determines the layout and styling of web pages. For
-example, here is a paragraph with a border:
 
-  <figure>
-    <img src="imgs/css/red_paragraph.msft.png"
-        alt="This has been styled with CSS."/>
-  </figure>
+<!-- ====================================================================== -->
+## Understand CSS
 
-Here is the HTML and CSS code used to create that paragraph:
+**CSS** is a computer language that controls the layout and styling of web pages.  The following figure is a paragraph with a border.
+
+:::image type="complex" source="../media/beginners-css-red_paragraph.msft.png" alt-text="The text has been styled with CSS" lightbox="../media/beginners-css-red_paragraph.msft.png":::
+   The text has been styled with CSS
+:::image-end:::
+
+The following code snippet is the HTML and CSS code used to create the paragraph in the previous figure.
 
 ```html
 <p style="border: 1px dashed red; padding: 5px;">
-  This has been styled with CSS.
-</p> 
-```
-
-`style="border: 1px dashed red; padding: 5px;"` probably looks new to you.
-The rest should look familiar. If not, complete [Get Started with HTML and the DOM](./html.md)
-before attempting this tutorial.
-
-## Add inline styles 
-
-Use **inline styles** when you want to apply styles to a single element. 
-Try it now:
-
-1. Go back to the editing tab and open `index.html`.
-
-     <figure>
-       <img src="imgs/css/inline1.msft.png"
-            alt="index.html."/>
-       <figcaption>
-         <b>Figure 6</b>. <code>index.html</code>
-       </figcaption>
-     </figure>
-
-2. Add `style="background-color: aliceblue;"` to your `<nav>`. In the code block below,
-   the fourth line of code is the one you need to change. The rest is just there so you
-   can be sure that you're putting the new code in the right place.
-
-    ```html
-    ...
-    <header>
-      <p>Welcome to my site!</p>
-    </header>
-    <nav style="background-color: aliceblue;">
-    <ul>
-      <li><a href="/">Home</a></li>
-      ...
-    ```
-
-3. Go to the **live tab** to see the changes! 
-   The background of the `<nav>` section is now blue.
-
-     <figure>
-       <img src="imgs/css/inline2.msft.png"
-            alt="The background color behind the Home and Contact links is now blue."/>
-       <figcaption>
-         <b>Figure 7</b>. The background color behind the Home and Contact links is now blue
-       </figcaption>
-     </figure>
-
-## Re-use styles on a single page with internal stylesheets 
-
-Earlier, you saw an inline style that applied a style to a single `<p>` tag like this:
-
-```html
-<p style="border: 1px dashed red; padding: 5px;">
-  This has been styled with CSS.
+    This has been styled with CSS.
 </p>
 ```
 
-What if you wanted all of the `<p>` elements on your webpage to be styled the same way? 
-You'd have to copy and paste the code into every single `<p>` tag on your site. 
-That's a lot of time and effort. And, if you needed to make an edit, you'd have to change every tag again. 
-**Internal stylesheets** allow you to write your CSS once so that it applies to multiple elements.
-Try it now:
+The HTML attribute `style="border: 1px dashed red; padding: 5px;"` might look new to you.  The rest should look familiar.  If not, complete [Get Started with HTML and the DOM](./html.md) before attempting the following sections.
 
-1. In the live tab, click **Contact** to go to the contact page. Notice the font of **Home** and **Contact**.
 
-     <figure>
-       <img src="imgs/css/internal1.msft.png"
-            alt="The Contact page."/>
-       <figcaption>
-         <b>Figure 8</b>. The Contact page
-       </figcaption>
-     </figure>
+<!-- ====================================================================== -->
+## Add inline styles
 
-2. In the **editor tab**, go to `contact.html`.
+You can use **inline styles** to apply styles to a single element.
 
-3. Add the following code to `contact.html`. Remember, the lines starting with `<style>` and ending with `</style>` are what you need to add. The
-   other code is just there so you know where to put the new code.
+1.  Go back to the editing tab and open `index.html`.
+
+    :::image type="complex" source="../media/beginners-css-inline1.msft.png" alt-text="index.html" lightbox="../media/beginners-css-inline1.msft.png":::
+       Open `index.html` in the editing tab
+    :::image-end:::
+
+1.  Add the attribute `style="background-color: aliceblue;"` in your `<nav>` element.  In the code block below, the fourth line of code is the only one you need to change.  The other lines of code are shown here to help you put the new attribute in the right place.
 
     ```html
-    ...
-    <head>
-      ...
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <style>
-        li a {
-          font-family: 'Courier New', Courier, Serif;
-        }
-      </style>
-    </head>
+    <header>
+        <p>Welcome to my site!</p>
+    </header>
+    <nav style="background-color: aliceblue;">
+        <ul>
+            <li><a href="/">Home</a></li>
+            ...
+        ...
     ...
     ```
 
-4. Go back to the **live tab**. 
-5. Click **Contact** to go back to the contact page. The font of **Home** and **Contact** has changed.
+1.  To display the changes, navigate to the **live tab**.  The background of the `<nav>` section is now blue.
 
-     <figure>
-       <img src="imgs/css/internal2.msft.png"
-            alt="The font of the Home and Contact links has changed."/>
-       <figcaption>
-         <b>Figure 9</b>. The font of the Home and Contact links has changed
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-inline2.msft.png" alt-text="The background color behind the Home and Contact links is now blue" lightbox="../media/beginners-css-inline2.msft.png":::
+       The background color behind the **Home** and **Contact** links is now blue
+    :::image-end:::
 
-### Understand internal stylesheets 
 
-Internal stylesheets apply styles using **selectors**. 
-Selectors are patterns that may apply to one or more HTML elements.
-For example, in the previous code:
+<!-- ====================================================================== -->
+## Reuse styles on a single page with internal stylesheets
+
+In a previous code snippet, an inline style applied a style to a single `<p>` tag.
+
+```html
+<p style="border: 1px dashed red; padding: 5px;">
+    This has been styled with CSS.
+</p>
+```
+
+What if you wanted all of the `<p>` elements on your webpage to be styled the same way?  You would have to copy and paste the code into every single `<p>` tag on your site, which would require a lot of time and effort.  If you needed to make an edit, you would have to change every tag again.  Instead, in the next steps, you use an **Internal stylesheet** to write your CSS once, so that it applies to multiple elements.
+
+1.  In the live tab, select **Contact** to navigate to the contact page.  Notice the font of the **Home** and **Contact** links.
+
+    :::image type="complex" source="../media/beginners-css-internal1.msft.png" alt-text="The Contact page" lightbox="../media/beginners-css-internal1.msft.png":::
+       The Contact page
+    :::image-end:::
+
+1.  In the **editor tab**, open `contact.html`.
+1.  Add the following code to `contact.html`.  Remember, the lines starting with `<style>` and ending with `</style>` are what you need to add.  The other code is shown here so you know where to put the new code.
+
+    ```html
+    ...
+        <head>
+            ...
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                li a {
+                  font-family: 'Courier New', Courier, Serif;
+                }
+            </style>
+            ...
+        </head>
+        ...
+    ...
+    ```
+
+1.  Go back to the **live tab**.
+1.  Select **Contact** to go back to the contact page.  Notice the font of the **Home** and **Contact** links has changed.
+
+    :::image type="complex" source="../media/beginners-css-internal2.msft.png" alt-text="The font of the Home and Contact links has changed" lightbox="../media/beginners-css-internal2.msft.png":::
+       The font of the **Home** and **Contact** links has changed
+    :::image-end:::
+
+### Understand internal stylesheets
+
+Internal stylesheets apply styles using **selectors**.  Selectors are patterns that may apply to one or more HTML elements.  The previous code snippet added the following style.
 
 ```html
 <style>
-  li a {
-    font-family: 'Courier New', Courier, serif;
-  }
+    li a {
+      font-family: 'Courier New', Courier, Serif;
+    }
 </style>
 ```
 
-`li a` is a selector that translates to "any `<li>` that contains an `<a>`". 
-The browser changes the font of the **Home** and **Contact** links 
-because they match this pattern. 
+`li a` is a selector that translates to "any `<li>` element that contains an `<a>` element".  The browser changes the font of the **Home** and **Contact** links because each of the tag groups match the pattern.
 
 ```html
 <li><a href="/">Home</a></li>
 <li><a href="/contact.html">Contact</a></li>
 ```
 
-`font-family: 'Courier New', Courier, serif` is a **declaration**. 
-A declaration is made of two parts: a **property** and a **value**. 
-`font-family` is the property, and `'Courier New', Courier, serif` is the value
-of that property. The property describes a general way that you can change the element's style,
-and the value says how exactly it should change.
-For example, `font-family: 'Courier New', Courier, serif` gives the browser this instruction:
-"Set the font of elements that match the pattern `li a` to `'Courier New'`. If that font
-isn't available, use `Courier`. If that isn't available, use `serif`."
+`font-family: 'Courier New', Courier, serif` is a **declaration**.  A declaration is made of following two parts.
 
-### Add multiple selectors to a ruleset 
+:::row:::
+   :::column span="1":::
+      **property**
+   :::column-end:::
+   :::column span="1":::
+      `font-family`
+   :::column-end:::
+   :::column span="2":::
+      The property describes which style of the element should be changed.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="1":::
+      **value**
+   :::column-end:::
+   :::column span="1":::
+      `'Courier New', Courier, serif`
+   :::column-end:::
+   :::column span="2":::
+      The value describes exactly how the style of the element should change.
+   :::column-end:::
+:::row-end:::
 
-A block of CSS code like what you see below is called a **ruleset**.
+For example, `font-family: 'Courier New', Courier, serif` gives the browser the following instruction:  "Set the font of elements that match the pattern `li a` to `'Courier New'`.  If that font isn't available, use `Courier`.  If that isn't available either, use `serif`."
+
+### Add multiple selectors to a ruleset
+
+The following CSS code snippet is called a **ruleset**.
 
 ```css
 li a {
@@ -280,278 +250,194 @@ li a {
 }
 ```
 
-Use commas to add multiple selectors to a ruleset. Try it now:
+The following steps describe how you can use commas to add multiple selectors to a ruleset.
 
-1. In the **editor tab**, open `contact.html`.
-2. After `li a` type `, h1`.
+1.  In the **editor tab**, open `contact.html`.
+1.  After `li a` type `, h1`.
 
     ```html
     <style>
-      li a, h1 {
-        font-family: 'Courier New', Courier, Serif;
-      }
+        li a, h1 {
+          font-family: 'Courier New', Courier, Serif;
+        }
     </style>
-    ...
     ```
 
-    This tells the browser to style `<h1>` elements the same way that it styles
-    elements that match the pattern `li a`.
+    The previous code snippet tells the browser to style `<h1>` elements the same way that it styles elements that match the pattern `li a`.
 
-3. Go to the **live tab**. 
-4. Click the **Contact** link to go back to the contact page. 
-   Now, **Contact Me!** has the same font as the navigation links.
+1.  Navigate to the **live tab**.
+1.  Select the **Contact** link to go back to the contact page.  Now, **Contact Me!** has the same font as the navigation links.
 
-     <figure>
-       <img src="imgs/css/multiple1.msft.png"
-            alt="The text 'Contact Me!' now has the same font as the Home and Contact links."/>
-       <figcaption>
-         <b>Figure 10</b>. The text "Contact Me!" now has the same font as the Home and Contact links
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-multiple1.msft.png" alt-text="The text Contact Me!  now has the same font as the Home and Contact links" lightbox="../media/beginners-css-multiple1.msft.png":::
+       The text **Contact Me!** now has the same font as the **Home** and **Contact** links
+    :::image-end:::
 
-## Experiment with DevTools 
 
-As you continue your journey to master web development, you'll find that CSS can be tricky.
-You'll write some CSS and expect it to display one way, but the browser does something completely
-different. Microsoft Edge DevTools makes it easy to experiment with changes and immediately see how
-those changes affect the page.
+<!-- ====================================================================== -->
+## Experiment with DevTools
 
-### Add a declaration to an existing rulest in DevTools 
+As you continue your journey to become an expert in web development, you may find that CSS is tricky.  You might write some code that doesn't display what you intended.  Microsoft Edge DevTools makes it easy to experiment by displaying your changes in the page in real time.
 
-When you want to iterate on the style of an existing element, add a declaration
-to an existing ruleset. Try it now:
+### Add a declaration to an existing ruleset in DevTools
 
-1. Right-click the **Home** link and select **Inspect**.
+To add a declaration to an existing ruleset
 
-     <figure>
-       <img src="imgs/css/add1.msft.png"
-            alt="Inspecting the Home link."/>
-       <figcaption>
-         <b>Figure 11</b>. Inspecting the Home link
-       </figcaption>
-     </figure>
+1.  Hover on the **Home** link, open the contextual menu (right-click), and select **Inspect**.
 
-    DevTools opens up alongside your page. The code that represents the Home link,
-    `<a href="/">Home</a>` is highlighted blue in the DOM Tree. This should be familiar from
-    [Get Started with HTML and the DOM](./html.md). In the **Styles** tab below the DOM Tree you can see the
-    `font-family: 'Courier New', Courier, serif` declaration that you added to `contact.html` earlier.
+    :::image type="complex" source="../media/beginners-css-add1.msft.png" alt-text="Inspect the Home link" lightbox="../media/beginners-css-add1.msft.png":::
+       Inspect the Home link
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/add2.msft.png"
-            alt="The Styles tab is below the DOM Tree."/>
-       <figcaption>
-         <b>Figure 12</b>. The Styles tab is below the DOM Tree
-       </figcaption>
-     </figure>
+    DevTools opens up alongside your page.  The code that represents the Home link, `<a href="/">Home</a>` is highlighted blue in the DOM Tree.  The code snippet and preview should be familiar from [Get Started with HTML and the DOM](./html.md).
 
-    If your DevTools window is wide, the Styles tab is to the right of the DOM Tree.
+    :::row:::
+       :::column span="":::
+          In the following figure, the `font-family: 'Courier New', Courier, serif` declaration that you previously added to `contact.html` is displayed in the **Styles** tab below the DOM Tree.
 
-     <figure>
-       <img src="imgs/css/add3.msft.png"
-            alt="The Styles tab is to the right of the DOM Tree."/>
-       <figcaption>
-         <b>Figure 13</b>. The Styles tab is to the right of the DOM Tree
-       </figcaption>
-     </figure>
+          :::image type="complex" source="../media/beginners-css-add2.msft.png" alt-text="The Styles tab is below the DOM Tree" lightbox="../media/beginners-css-add2.msft.png":::
+             The **Styles** tab is below the DOM Tree
+          :::image-end:::
+       :::column-end:::
+       :::column span="":::
+          If your DevTools window is wide, the Styles tab is to the right of the DOM Tree.
 
-2. Click the whitespace below `font-family: 'Courier New', Courier, Serif` to add a new declaration.
+          :::image type="complex" source="../media/beginners-css-add3.msft.png" alt-text="The Styles tab is to the right of the DOM Tree" lightbox="../media/beginners-css-add3.msft.png":::
+             The **Styles** tab is to the right of the DOM Tree
+          :::image-end:::
+       :::column-end:::
+    :::row-end:::
 
-     <figure>
-       <img src="imgs/css/add4.msft.png"
-            alt="Adding a new declaration."/>
-       <figcaption>
-         <b>Figure 14</b>. Adding a new declaration
-       </figcaption>
-     </figure>
+1.  Select the empty line below `font-family: 'Courier New', Courier, Serif` to add a new declaration.
 
-3. Type `color` and then press `Enter`. The autocomplete UI suggests options as you type.
+    :::image type="complex" source="../media/beginners-css-add4.msft.png" alt-text="Add a new declaration" lightbox="../media/beginners-css-add4.msft.png":::
+       Add a new declaration
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/add5.msft.png"
-            alt="Typing 'color'."/>
-       <figcaption>
-         <b>Figure 15</b>. Typing <code>color</code>
-       </figcaption>
-     </figure>
+1.  Type `color` and select `Enter`.  The autocomplete UI suggests options as you type.
 
-4. Type `magenta` and then press `Enter` again. All of the text on the contact page is now magenta.
+    :::image type="complex" source="../media/beginners-css-add5.msft.png" alt-text="Type color" lightbox="../media/beginners-css-add5.msft.png":::
+       Type `color`
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/add6.msft.png"
-            alt="Typing 'magenta'."/>
-       <figcaption>
-         <b>Figure 16</b>. Typing <code>magenta</code>
-       </figcaption>
-     </figure>
+1.  Type `magenta` and select `Enter`.  All of the text on the contact page is now magenta.
 
-### Edit a declaration in DevTools 
+    :::image type="complex" source="../media/beginners-css-add6.msft.png" alt-text="Type magenta" lightbox="../media/beginners-css-add6.msft.png":::
+       Type `magenta`
+    :::image-end:::
 
-You can also edit existing declarations in DevTools. Try it now:
+### Edit a declaration in DevTools
 
-1. Click the magenta square next to `magenta`. A color picker pops up.
+To edit existing declarations in DevTools
 
-     <figure>
-       <img src="imgs/css/edit1.msft.png"
-            alt="The Color Picker."/>
-       <figcaption>
-         <b>Figure 16</b>. The Color Picker
-       </figcaption>
-     </figure>
+1.  Select the magenta square next to `magenta`.  A color picker pops up.
 
-2. Use the color picker to change the font text to a color that you like.
+    :::image type="complex" source="../media/beginners-css-edit1.msft.png" alt-text="The Color Picker" lightbox="../media/beginners-css-edit1.msft.png":::
+       The Color Picker
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/edit2.msft.png"
-            alt="Changing the font color to purple with the Color Picker."/>
-       <figcaption>
-         <b>Figure 17</b>. Changing the font color to purple with the Color Picker
-       </figcaption>
-     </figure>
+1.  Use the color picker to change the font text to a color that you like.
 
-### Add a new ruleset in DevTools 
+    :::image type="complex" source="../media/beginners-css-edit2.msft.png" alt-text="Change the font color to purple with the Color Picker" lightbox="../media/beginners-css-edit2.msft.png":::
+       Change the font color to purple with the Color Picker
+    :::image-end:::
 
-You can also add new rulesets in DevTools. Try it now:
+### Add a new ruleset in DevTools
 
-1. Click **New Style Rule**
-<img src="./../images/shared/new-style-rule.msft.png" alt="New Style Rule" width="20px" height="20px">
-   which is next to **.cls**. An empty ruleset appears with `a` as the selector.
+To add new rulesets in DevTools
 
-     <figure>
-       <img src="imgs/css/rule1.msft.png"
-            alt="Adding a new rule."/>
-       <figcaption>
-         <b>Figure 18</b>. Adding a new rule
-       </figcaption>
-     </figure>
+1.  Select **New Style Rule** (![New Style Rule](../media/new-style-rule-icon.msft.png)) which is next to **.cls**.  An empty ruleset appears with `a` as the selector.
 
-2. Replace `a` with `a:hover`.
+    :::image type="complex" source="../media/beginners-css-rule1.msft.png" alt-text="Add a new rule" lightbox="../media/beginners-css-rule1.msft.png":::
+       Add a new rule
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/rule2.msft.png"
-            alt="Replacing 'a' with 'a:hover'."/>
-       <figcaption>
-         <b>Figure 19</b>. Replacing <code>a</code> with <code>a:hover</code>
-       </figcaption>
-     </figure>
+1.  Replace `a` with `a:hover`.
 
-    `:hover` is a **pseudo-class**. Use pseudo-classes to
-    style elements when they enter special states. For example, the `a:hover` style
-    only takes effect when you're hovering over an `<a>` element.
+    :::image type="complex" source="../media/beginners-css-rule2.msft.png" alt-text="Replace a with a:hover" lightbox="../media/beginners-css-rule2.msft.png":::
+       Replace `a` with `a:hover`
+    :::image-end:::
 
-3. Click between the brackets to add a new declaration.
-4. Type `background-color` for the declaration name and then press `Enter`.
+    `:hover` is a **pseudo-class**.  Use pseudo-classes for style elements that may enter special states.  For example, the `a:hover` style only takes effect when you're hovering over an `<a>` element.
 
-     <figure>
-       <img src="imgs/css/rule3.msft.png"
-            alt="Typing 'background-color'."/>
-       <figcaption>
-         <b>Figure 20</b>. Typing <code>background-color</code>
-       </figcaption>
-     </figure>
+1.  Select the empty area between the brackets to add a new declaration.
 
-5. Type `green` for the declaration value and then press `Enter`.
+1.  Type `background-color` for the declaration name and select `Enter`.
 
-     <figure>
-       <img src="imgs/css/rule4.msft.png"
-            alt="Typing 'green'."/>
-       <figcaption>
-         <b>Figure 21</b>. Typing <code>green</code>
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-rule3.msft.png" alt-text="Type background-color" lightbox="../media/beginners-css-rule3.msft.png":::
+       Type `background-color`
+    :::image-end:::
 
-6. Hover your mouse over the **Home** link. The background of the link turns green.
+1.  Type `green` for the declaration value and select `Enter`.
 
-     <figure>
-       <img src="imgs/css/rule5.msft.png"
-            alt="Hovering over the Home link to reveal its green background."/>
-       <figcaption>
-         <b>Figure 22</b>. Hovering over the Home link to reveal its green background
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-rule4.msft.png" alt-text="Type green" lightbox="../media/beginners-css-rule4.msft.png":::
+       Type `green`
+    :::image-end:::
 
-## Re-use styles across pages with external stylesheets 
+1.  Hover your mouse over the **Home** link.  The background of the link turns green.
 
-Earlier you added this internal stylesheet to `contact.html`:
+    :::image type="complex" source="../media/beginners-css-rule5.msft.png" alt-text="Hover on the Home link to reveal its green background" lightbox="../media/beginners-css-rule5.msft.png":::
+       Hover on the Home link to reveal its green background
+    :::image-end:::
+
+
+<!-- ====================================================================== -->
+## Reuse styles across pages with external stylesheets
+
+In a previous step, you added the following code snippet as an internal stylesheet to `contact.html`.
 
 ```html
-<style>
-  li a, h1 {
-    font-family: 'Courier New', Courier, monospace;
-  }
-</style>
+...
+    ...
+        ...
+        <style>
+            li a, h1 {
+              font-family: 'Courier New', Courier, Serif;
+            }
+        </style>
+        ...
+    ...
+...
 ```
 
-What if you wanted to style `index.html` the same way? 
-What if you had a *thousand* pages and you wanted to apply these styles to all of them?
-You'd have to copy and paste this internal stylesheet into every single web page on your site. 
-**External stylesheets** allow you to write your CSS once yet apply it to multiple pages.
-Try it now:
+What if you wanted to style `index.html` the same way?  What if you had a large number of pages to which you wanted to apply your styles?  You would have to copy and paste the internal stylesheet into every single web page on your site.  The following steps describe how to add an **External stylesheet** to allow you to write your CSS once and apply it to multiple pages.
 
-1. First, reload the live tab to remove the changes that you made in DevTools.
+1.  First, refresh the live tab to remove the changes that you made in DevTools.
 
-     <figure>
-       <img src="imgs/css/external1.msft.png"
-            alt="After reloading the page the changes that were made in DevTools are gone."/>
-       <figcaption>
-         <b>Figure 23</b>. After reloading the page the changes that were made in DevTools are gone
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external1.msft.png" alt-text=" After you refresh the page, the changes that were made in DevTools are gone" lightbox="../media/beginners-css-external1.msft.png":::
+        After you refresh the page, the changes that were made in DevTools are gone
+    :::image-end:::
 
-2. Go back to the **editor tab** and open `contact.html`.
+1.  Go back to the **editor tab** and open `contact.html`.
 
-     <figure>
-       <img src="imgs/css/external2.msft.png"
-            alt="contact.html"/>
-       <figcaption>
-         <b>Figure 24</b>. contact.html
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external2.msft.png" alt-text="contact.html" lightbox="../media/beginners-css-external2.msft.png":::
+       contact.html
+    :::image-end:::
 
-3. Delete everything between `<style>` and `</style>`, including `<style>` and `</style>`.
+1.  Delete everything between `<style>` and `</style>`, including `<style>` and `</style>`.
 
-     <figure>
-       <img src="imgs/css/external3.msft.png"
-            alt="The style tag has been removed."/>
-       <figcaption>
-         <b>Figure 25</b>. The style tag has been removed
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external3.msft.png" alt-text="The style tag has been removed" lightbox="../media/beginners-css-external3.msft.png":::
+       The style tag has been removed
+    :::image-end:::
 
-4. Go to `index.html` and remove `style="background-color: aliceblue;"`
-   from the `<nav>` tag.
+1.  Open `index.html` and remove `style="background-color: aliceblue;"` from the `<nav>` tag.  You have now removed all of the CSS that you previously added to your site.
 
-    You have now removed all of the CSS that you previously added to your site.
+    :::image type="complex" source="../media/beginners-css-external4.msft.png" alt-text="The inline style has been removed from the nav element" lightbox="../media/beginners-css-external4.msft.png":::
+       The inline style has been removed from the nav element
+    :::image-end:::
 
+1.  Select **New File**.
 
-     <figure>
-       <img src="imgs/css/external4.msft.png"
-            alt="The inline style has been removed from the nav element."/>
-       <figcaption>
-         <b>Figure 26</b>. The inline style has been removed from the nav element
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external5.msft.png" alt-text="The new file dialog" lightbox="../media/beginners-css-external5.msft.png":::
+       The new file dialog
+    :::image-end:::
 
-5. Click **New File**.
+1.  Replace `cool-file.js` with `style.css` and select **Add File**.
 
-     <figure>
-       <img src="imgs/css/external5.msft.png"
-            alt="The new file dialog."/>
-       <figcaption>
-         <b>Figure 27</b>. The new file dialog
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external6.msft.png" alt-text="Type style.css" lightbox="../media/beginners-css-external6.msft.png":::
+       Type `style.css`
+    :::image-end:::
 
-6. Replace `cool-file.js` with `style.css` and then click **Add File**.
-
-     <figure>
-       <img src="imgs/css/external6.msft.png"
-            alt="Typing 'style.css'."/>
-       <figcaption>
-         <b>Figure 28</b>. Typing <code>style.css</code>
-       </figcaption>
-     </figure>
-
-7. Paste this code into `style.css`:
+1.  Add the following code snippet to your `style.css` file.
 
     ```css
     li a, h1 {
@@ -565,151 +451,108 @@ Try it now:
     }
     ```
 
-     <figure>
-       <img src="imgs/css/external7.msft.png"
-            alt="Adding code to style.css"/>
-       <figcaption>
-         <b>Figure 29</b>. Adding code to <code>style.css</code>
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external7.msft.png" alt-text="Add code to style.css" lightbox="../media/beginners-css-external7.msft.png":::
+       Add code to `style.css`
+    :::image-end:::
 
+    Ensure that you have created an external stylesheet. Your HTML isn't aware that it exists.
 
-    At this point, you have created an external stylesheet, but your HTML doesn't know that it exists, yet.
-
-8. Open `index.html`.
-9. Add `<link rel="stylesheet" href="style.css">` to your HTML.
+1.  Open `index.html`.
+1.  Add `<link rel="stylesheet" href="style.css">` to your HTML.
 
     ```html
-    ...
     <head>
-      ...
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css">
+        ...
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
     </head>
-    ...
     ```
 
-     <figure>
-       <img src="imgs/css/external8.msft.png"
-            alt="Linking to style.css."/>
-       <figcaption>
-         <b>Figure 30</b>. Linking to <code>style.css</code>
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external8.msft.png" alt-text="Link to style.css" lightbox="../media/beginners-css-external8.msft.png":::
+       Link to `style.css`
+    :::image-end:::
 
-10. Go to `contact.html` and add the link there, too.
+1.  Open the `contact.html` file and add the link there.
 
-     <figure>
-       <img src="imgs/css/external9.msft.png"
-            alt="Linking to style.css in contact.html."/>
-       <figcaption>
-         <b>Figure 31</b>. Linking to <code>style.css</code> in <code>contact.html</code>
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external9.msft.png" alt-text="Link to style.css in contact.html" lightbox="../media/beginners-css-external9.msft.png":::
+       Link to `style.css` in `contact.html`
+    :::image-end:::
 
-11. Go to the **live tab**. The home page now has the same font 
-   from the last section and a blue navigation section.
+1.  Navigate to the **live tab**.  The home page now has the same font from the last section and a blue navigation section.
 
-     <figure>
-       <img src="imgs/css/external10.msft.png"
-            alt="The home page."/>
-       <figcaption>
-         <b>Figure 32</b>. The home page
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external10.msft.png" alt-text="The home page" lightbox="../media/beginners-css-external10.msft.png":::
+       The home page
+    :::image-end:::
 
-12. Click the **Contact** link to go to the contact page. 
-   The contact page has the same formatting as the home page.
+1.  Select the **Contact** link to navigate to the contact page.  The contact page has the same formatting as the home page.
 
-     <figure>
-       <img src="imgs/css/external11.msft.png"
-            alt="The contact page"/>
-       <figcaption>
-         <b>Figure 33</b>. The contact page
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-external11.msft.png" alt-text="The contact page" lightbox="../media/beginners-css-external11.msft.png":::
+       The contact page
+    :::image-end:::
 
-## Use a CSS framework 
 
-**CSS frameworks** are collections of styles built by other developers that make it easier
-to create attractive web sites. Instead of defining styles yourself, a framework gives you
-a collection of styles that you can use on your page elements.
+<!-- ====================================================================== -->
+## Use a CSS framework
 
-1. Copy the following code: 
-   `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">` 
-2. Go to the editing tab and paste the code into `contact.html`.
+**CSS frameworks** are collections of styles built by other developers that make it easier to create attractive web sites.  Instead of defining styles yourself, a framework provides you a collection of styles that you are able to use on your page elements.
 
-     <figure>
-       <img src="imgs/css/framework1.msft.png"
-            alt="Linking to the framework in contact.html."/>
-       <figcaption>
-         <b>Figure 34</b>. Linking to the framework in contact.html
-       </figcaption>
-     </figure>
+Do the following steps to add the Bootstrap CSS framework to your page.
 
-3. Paste the code into `index.html`, as well.
+1.  Copy the following code:
 
-     <figure>
-       <img src="imgs/css/framework2.msft.png"
-            alt="Linking to the framework in index.html"/>
-       <figcaption>
-         <b>Figure 35</b>. Linking to the framework in index.html
-       </figcaption>
-     </figure>
+    ```html
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    ```
 
-4. Go back to the live tab to view your changes. While the background color of the `<nav>` 
-   and the font of the `li a` elements are the same, the font of the other elements has changed.
+1.  Open the editing tab and paste the code into `contact.html`.
 
-     <figure>
-       <img src="imgs/css/framework3.msft.png"
-            alt="Some of the font on the home page has changed because of the framework."/>
-       <figcaption>
-         <b>Figure 36</b>. Some of the font on the home page has changed because of the framework
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-framework1.msft.png" alt-text="Link to the framework in contact.html" lightbox="../media/beginners-css-framework1.msft.png":::
+       Link to the framework in `contact.html`
+    :::image-end:::
 
-### Use a class 
- 
-In the last section, you added Bootstrap to your web pages, 
-which changed the fonts of some of the elements on your site. 
-CSS frameworks can help you make major changes to your page with very little code. 
-Try it now by changing your header:
+1.  Open the `index.html` file and add the code there.
 
-1. Copy this code: `class="jumbotron jumbotron-fluid"`
-2. Add this code to your `<header>` tag in `index.html`.
+    :::image type="complex" source="../media/beginners-css-framework2.msft.png" alt-text="Link to the framework in index.html" lightbox="../media/beginners-css-framework2.msft.png":::
+       Link to the framework in `index.html`
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/jumbotron1.msft.png"
-            alt="Adding the jumbotron class in index.html."/>
-       <figcaption>
-         <b>Figure 37</b>. Adding classes in index.html
-       </figcaption>
-     </figure>
+1.  Go back to the live tab to view your changes.  While the background color of the `<nav>` element and the font of the `<li>` and `<a>` elements are the same, the font of the other elements has changed.
 
-3. Add the code to your `<header>` tag in `contact.html`, too.
+    :::image type="complex" source="../media/beginners-css-framework3.msft.png" alt-text="Some of the font on the home page changed because of the framework" lightbox="../media/beginners-css-framework3.msft.png":::
+       Some of the font on the home page changed because of the framework
+    :::image-end:::
 
-     <figure>
-       <img src="imgs/css/jumbotron2.msft.png"
-            alt="Adding the jumbotron class in contact.html."/>
-       <figcaption>
-         <b>Figure 38</b>. Adding classes in contact.html
-       </figcaption>
-     </figure>
+### Use a class
 
-4. View your changes in the live tab. There's a big, grey box around your header now.
+In the last section, you added Bootstrap to your web pages, which changed the fonts of some of the elements on your site.  CSS frameworks help you make major changes to your page with very little code.  Go through the following steps to use one of Bootstrap's classes to change your header.
 
-     <figure>
-       <img src="imgs/css/jumbotron3.msft.png"
-            alt="The header now has a big, grey box around it."/>
-       <figcaption>
-         <b>Figure 39</b>. The header now has a big, grey box around it
-       </figcaption>
-     </figure>
+1.  Copy the following code snippet.
 
-### Understand classes 
+    ```html
+    class="jumbotron jumbotron-fluid"
+    ```
 
-Classes let you assign collections of styles to arbitrary elements. For example, setting the
-`class` attribute of the `<header>` tags to `jumbotron` applied the following styles to them:
+1.  Add the previous code snippet to your `<header>` tag in `index.html`.
+
+    :::image type="complex" source="../media/beginners-css-jumbotron1.msft.png" alt-text="Add classes in index.html" lightbox="../media/beginners-css-jumbotron1.msft.png":::
+       Add classes in `index.html`
+    :::image-end:::
+
+1.  Add the code to your `<header>` tag in `contact.html`.
+
+    :::image type="complex" source="../media/beginners-css-jumbotron2.msft.png" alt-text="Add classes in contact.html" lightbox="../media/beginners-css-jumbotron2.msft.png":::
+       Add classes in `contact.html`
+    :::image-end:::
+
+1.  View your changes in the live tab.  There is a large, grey box around your header.
+
+    :::image type="complex" source="../media/beginners-css-jumbotron3.msft.png" alt-text="The header now has a large, grey box around it" lightbox="../media/beginners-css-jumbotron3.msft.png":::
+       The header now has a large, grey box around it
+    :::image-end:::
+
+### Understand classes
+
+Classes let you assign collections of styles to arbitrary elements.  Use the following code snippet to apply several styles to the `<header>` element after you set the `class` attribute to `jumbotron`.
 
 ```css
 .jumbotron {
@@ -720,85 +563,67 @@ Classes let you assign collections of styles to arbitrary elements. For example,
 }
 ```
 
-One advantage of classes is that they let you apply styles to whatever elements you want. For example,
-suppose you want to set the background color of *some* `<p>` elements to purple, but not *all* of them.
-You could define the style in a class:
+One advantage of a class is that it lets you apply styles to whatever elements you want.  For example, suppose you want to set the background color of some `<p>` elements to purple, but not all `<p>` elements.  Use the following code snippet to define the style in a class.
 
 ```css
-.custom-background {
+.my-class-name {
   background-color: purple;
 }
 ```
 
-And then apply the class to only the `<p>` elements that you want to style:
+Next, apply the class to only the `<p>` elements that you want to style.
 
 ```html
-<p>This won't be purple.</p>
-<p class="custom-background">This will be purple.</p>
-<p>This won't be purple.</p>
-<p class="custom-background">This will be purple.</p>
+<p>The text is not purple.</p>
+<p class="my-class-name">The text is purple.</p>
+<p>The text is not purple.</p>
+<p class="my-class-name">The text is purple.</p>
 ```
 
-### Align elements 
+### Align elements
 
-Bootstrap also provides classes for aligning elements. Try it now:
+Complete the following steps to use other Bootstrap classes that are useful for aligning elements.
 
-1. Go back to the editor tab and open `index.html`.
-2. Add `class="container-fluid"` to your `<body>` tag.
+1.  Go back to the editor tab and open `index.html`.
+1.  Add `class="container-fluid"` to your `<body>` tag.
 
-     <figure>
-       <img src="imgs/css/align1.msft.png"
-            alt="Adding the 'container-fluid' class."/>
-       <figcaption>
-         <b>Figure 40</b>. Adding the <code>container-fluid</code> class
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-align1.msft.png" alt-text="Add the container-fluid class" lightbox="../media/beginners-css-align1.msft.png":::
+       Add the `container-fluid` class
+    :::image-end:::
 
-3. Wrap your `<nav>` and `<main>` elements in `<div class="row">`. Make sure to put `</div>` after
-   `</main>` in order to properly close the new tag.
+1.  Wrap your `<nav>` and `<main>` elements in `<div class="row">`.  Make sure to put `</div>` after `</main>` to properly close the new tag.
 
-     <figure>
-       <img src="imgs/css/align2.msft.png"
-            alt="Adding a row."/>
-       <figcaption>
-         <b>Figure 41</b>. Adding a row
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-align2.msft.png" alt-text="Add a row" lightbox="../media/beginners-css-align2.msft.png":::
+       Add a row
+    :::image-end:::
 
-4. Add `class="col-3"` to your `<nav>` tag and `class="col-9"` to your `<main>` tag.
+1.  Add `class="col-3"` to your `<nav>` tag and `class="col-9"` to your `<main>` tag.
 
-     <figure>
-       <img src="imgs/css/align3.msft.png"
-            alt="Adding the 'col-3' and 'col-9' classes."/>
-       <figcaption>
-         <b>Figure 42</b>. Adding the <code>col-3</code> and <code>col-9</code> classes
-       </figcaption>
-     </figure>
+    :::image type="complex" source="../media/beginners-css-align3.msft.png" alt-text="Add the col-3 and col-9 classes" lightbox="../media/beginners-css-align3.msft.png":::
+       Add the `col-3` and `col-9` classes
+    :::image-end:::
 
-5. View your changes in the live tab.
+1.  View your changes in the live tab.
 
-     <figure>
-       <img src="imgs/css/align4.msft.png"
-            alt="The nav content is now to the left of the main content."/>
-       <figcaption>
-         <b>Figure 43</b>. The nav content is now to the left of the main content
-       </figcaption>
-     </figure>
-
-## Next steps 
-
-Congratulations! You're done! 
-
-* The best way to get better at web development is to build more sites. Don't worry about breaking stuff. Just
-  have fun and learn as much as you can along the way.
-* Check out [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) to learn lots
-  more about styling web pages.
-* Work through our [Get Started with Viewing and Changing CSS](./../css/index.md) tutorial
-  to learn more about how you can use DevTools to experiment with a page's CSS.
+    :::image type="complex" source="../media/beginners-css-align4.msft.png" alt-text="The nav content is now to the left of the main content" lightbox="../media/beginners-css-align4.msft.png":::
+       The nav content is now to the left of the main content
+    :::image-end:::
 
 
+<!-- ====================================================================== -->
+## Next steps
+
+Congratulations, you're done!
+
+*   The best way to get better at web development is to build more sites.  Don't worry about breaking stuff.  Just have fun and learn as much as possible along the way.
+*   To learn more about styling web pages, navigate to [Introduction to CSS](https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS).
+*   To learn more about how to experiment with CSS in DevTools, navigate to [Get Started with Viewing and Changing CSS](../css/index.md).
+
+
+<!-- ====================================================================== -->
 > [!NOTE]
-> Portions of this page are modifications based on work created and [shared by Google](https://developers.google.com/terms/site-policies) and used according to terms 
-  described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The original page can be found [here](https://developers.google.com/web/tools/chrome-devtools/beginners/css) and is authored by [Katherine Jackson](https://developers.google.com/web/resources/contributors/katjackson) (Technical Writer Intern, Chrome DevTools).
-  
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+> Portions of this page are modifications based on work created and [shared by Google](https://developers.google.com/terms/site-policies) and used according to terms described in the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0).
+> The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/beginners/css) and is authored by [Katherine Jackson](https://developers.google.com/web/resources/contributors#katherine-jackson) (Technical Writer Intern, Chrome DevTools).
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0).
